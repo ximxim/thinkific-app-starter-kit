@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  subdomain    String   @unique
+  accessToken  String
+  refreshToken String
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model User {
+  id          String   @id @default(cuid())
+  thinkificId String   @unique
+  email       String
+  firstName   String?
+  lastName    String?
+  subdomain   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
