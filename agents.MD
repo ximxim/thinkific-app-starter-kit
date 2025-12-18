@@ -660,6 +660,31 @@ function CourseList() {
 
 ---
 
+## GraphQL Schema Reference
+
+**IMPORTANT:** When creating or modifying GraphQL queries for Thinkific, always reference the schema file first.
+
+### Schema Location
+
+The Thinkific GraphQL API schema is stored at:
+- `lib/queries/schema.graphql`
+
+### Rules for AI Assistants
+
+1. **Always read the schema first** - Before writing any GraphQL query or mutation, read `lib/queries/schema.graphql` to understand available types, fields, and arguments
+2. **Validate against schema** - Ensure all queries use only fields and types defined in the schema
+3. **Check field availability** - Verify that requested fields exist on the types before including them in queries
+4. **Use correct argument types** - Reference the schema for required vs optional arguments and their types
+
+### Workflow for Creating GraphQL Queries
+
+1. Read `lib/queries/schema.graphql` to understand the API structure
+2. Identify the relevant types and fields for the use case
+3. Create the query in the appropriate file under `lib/queries/`
+4. Include TypeScript type definitions that match the query response
+
+---
+
 ## Directory Structure
 
 ```
