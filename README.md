@@ -1,4 +1,4 @@
-# Learn Alchemy - Thinkific App Starter
+# Thinkific App Starter
 
 A production-ready starter repository for building Thinkific apps with OAuth integration, GraphQL API support, and session management.
 
@@ -15,8 +15,8 @@ A production-ready starter repository for building Thinkific apps with OAuth int
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/learn-alchemy.git
-cd learn-alchemy
+git clone https://github.com/your-username/thinkific-app-starter-kit.git
+cd thinkific-app-starter-kit 
 ```
 
 ### 2. Install Dependencies
@@ -87,7 +87,7 @@ Before using this starter, you need to register an app in the Thinkific Partner 
 ## Project Structure
 
 ```
-learn-alchemy/
+thinkific-app-starter-kit/
 ├── app/
 │   ├── (auth)/              # Auth-related pages
 │   │   └── login/           # Login page with subdomain input
